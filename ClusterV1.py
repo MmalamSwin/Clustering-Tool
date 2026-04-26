@@ -89,7 +89,7 @@ if uploaded_file is not None:
     # -------------------------------
     # Resample hourly
     # -------------------------------
-    df_hourly = df.resample("h").sum()
+    df_hourly = df.resample("h").mean()
 
     df_hourly["date"] = df_hourly.index.date
     df_hourly["hour"] = df_hourly.index.hour
